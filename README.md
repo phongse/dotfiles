@@ -1,14 +1,23 @@
 # dotfiles
 
-* **Wayland Compositor** - [Hyprland](https://github.com/hyprwm/Hyprland) a dynamic tiling Wayland compositor
-* **Terminal** - [Kitty](https://github.com/kovidgoyal/kitty) a cross-platform, fast, feature-rich, GPU based terminal
-* **Panel** - [Waybar](https://github.com/Alexays/Waybar) with `-Dexperimental=true` build flag
-* **Launcher** - [Rofi](https://github.com/lbonn/rofi) fork with Wayland support
-* **File manager** - [Ranger](https://github.com/ranger/ranger) a VIM-inspired file manager for the console
+Dotfiles for my laptop running Arch Linux.
 
-# Install
+## Dependencies
 
-Using paru as AUR helper
+* [hyprland-git](https://github.com/hyprwm/Hyprland) - Wayland compositor
+* [kitty](https://github.com/kovidgoyal/kitty) - Terminal
+* [waybar-hyprland-git](https://github.com/Alexays/Waybar) - Bar / Panel
+* [rofi-lbonn-wayland-git](https://github.com/lbonn/rofi) - Launcher
+* [ranger](https://github.com/ranger/ranger) - File manager
+* [dunst](https://github.com/dunst-project/dunst) - Notification daemon
+* [swaylock-effects-git](https://github.com/jirutka/swaylock-effects) + [swayidle](https://github.com/swaywm/swayidle) + [swaybg](https://github.com/swaywm/swaybg) - Lock, idle and wallpaper
+* [grim](https://sr.ht/~emersion/grim/) + [slurp](https://github.com/emersion/slurp) + [swappy](https://github.com/jtheoof/swappy) - Image grabber tools
+
+## Installation
+
+These instructions assume an Arch Linux-based distribution. Instructions may vary on other GNU/Linux distributions. Follow the links in the dependencies section if a package is unavailable on your distribution.
+
+1. Install an AUR Helper, paru:
 ```sh
 git clone https://aur.archlinux.org/paru.git
 cd paru
@@ -18,17 +27,20 @@ makepkg -si
 paru --gendb
 ```
 
-Install packages and dependencies
+2. Install required dependencies
 
-```shell
-paru -S hyprland-git kitty waybar-hyprland-git rofi-lbonn-wayland-git swaylock-effects-git swayidle dunst swaybg grim slurp swappy rsync
+```sh
+paru -S hyprland-git kitty waybar-hyprland-git rofi-lbonn-wayland-git ranger dunst swaylock-effects-git swayidle swaybg grim slurp swappy
 ```
 
-Clone repository and install dotfiles with rsync
+3. Clone dotfiles repository
 ```sh
 git clone https://github.com/phongse/dotfiles
-cd dotfiles
-rsync -avxHAXP --exclude '.git*' . ~/
+```
+
+4. Copy dotfiles into your .config directory
+```sh
+cp -ri dotfiles/.config/* ~/.config/
 ```
 # Credits
 - [Catppuccin](https://github.com/catppuccin) - Pastel Color palette
