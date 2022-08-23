@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     // "modules-center": [],
-    "modules-right": ["tray", "pulseaudio","network#wireguard", "network", "battery", "clock"],
+    "modules-right": ["tray", "network#wireguard", "network", "pulseaudio", "battery", "clock"],
 
     // modules config
     "wlr/workspaces": {
@@ -21,7 +21,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "interval": 60,
-        "format": "{:%H:%M %d %B %Y}",
+        "format": "{:%d %B %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
         "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
         "calendar-weeks-pos": "left",
@@ -45,25 +45,26 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "network#wireguard": {
         "interface": "wg0", // (Optional) To force the use of this interface
-        "format-ethernet": "VPN ",
-        "format-disconnected": "VPN OFF ⚠",
-        "tooltip": false,
-        "on-click": "nmcli connection up wg0",
-        "on-click-right": "nmcli connection down wg0"
+        "format-ethernet": "",
+        "format-disconnected": "VPN OFF ",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nmcli connection up wg0", // String substituion with {ifname} not supported
+        "on-click-right": "nmcli connection down wg0" // // String substituion with {ifname} not supported
 
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

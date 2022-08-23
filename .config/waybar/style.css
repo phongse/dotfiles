@@ -105,6 +105,10 @@ window#waybar.solo {
     margin-right: 0;
 }
 
+#battery {
+    color: @mauve;
+}
+
 #battery.charging, #battery.plugged {
     color: @green;
 }
@@ -126,6 +130,10 @@ window#waybar.solo {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#pulseaudio {
+    color: @peach;
 }
 
 label:focus {
