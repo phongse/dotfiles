@@ -133,7 +133,11 @@ window#waybar.solo {
 }
 
 #pulseaudio {
-    color: @peach;
+    color: @sapphire;
+}
+
+#pulseaudio.muted {
+    color: @red;
 }
 
 label:focus {
