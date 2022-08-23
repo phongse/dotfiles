@@ -8,4 +8,4 @@ export QT_QPA_PLATFORM=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XCURSOR_SIZE=32
 
-exec Hyprland
+exec Hyprland &> /dev/null
