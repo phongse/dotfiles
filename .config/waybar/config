@@ -27,7 +27,7 @@
         "calendar-weeks-pos": "left",
         "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
         "format-calendar-weeks": "<span color='#99ffdd'><b>{:%V}</b></span>",
-        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>"
     },
     "battery": {
         "states": {

@@ -1,0 +1,14 @@
+configuration {
+  modes: "run";
+  font: "Fira Code 12";
+  show-icons: true;
+  terminal: "kitty";
+  click-to-exit: true;
+  steal-focus: true;
+  timeout {
+    action: "kb-cancel";
+    delay: 0;
+  }
+}
+
+@theme "catppuccin-frappe"
