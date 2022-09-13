@@ -60,7 +60,6 @@
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nmcli connection up wg0", // String substituion with {ifname} not supported
         "on-click-right": "nmcli connection down wg0" // // String substituion with {ifname} not supported
-
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
