@@ -5,7 +5,7 @@ Dotfiles for my laptop running Arch Linux.
 ## Dependencies
 
 * [hyprland-git](https://github.com/hyprwm/Hyprland) - Wayland compositor
-* [kitty](https://github.com/kovidgoyal/kitty) - Terminal
+* [foot](https://codeberg.org/dnkl/foot) - Terminal
 * [waybar-hyprland-git](https://github.com/Alexays/Waybar) - Bar / Panel
 * [rofi-lbonn-wayland-git](https://github.com/lbonn/rofi) - Launcher
 * [ranger](https://github.com/ranger/ranger) - File manager
